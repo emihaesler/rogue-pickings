@@ -51,7 +51,6 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-flow: column wrap;
-	width: 100%;
 }
 
 header h1 {
@@ -70,7 +69,11 @@ header nav {
 }
 
 header nav ul {
-	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	padding: 0;
 }
 header nav ul li {
 	display: flex;
@@ -93,7 +96,6 @@ header nav ul li a {
 	justify-content: center;
 	align-items: center;
 	flex-flow: column wrap;
-	width: 100%;
 }
 
 .main-image {
@@ -117,10 +119,11 @@ header nav ul li a {
 	line-height: 25px;
 }
 
+
 .section-one,
 .section-two,
 .section-three {
-	width: 100%;;
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
@@ -129,13 +132,13 @@ header nav ul li a {
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	/*border-left: 1px solid #eee;
+	border-right: 1px solid #eee;*/
 }
 
 .section-two h3,
 .section-three h3 {
-	padding: 10px 30px;
+	padding: 10px 0;
 }
 
 .menu {
@@ -151,11 +154,13 @@ header nav ul li a {
 	color: #333;
 	font-size: 16px;
 	line-height: 21px;
+	padding: 0;
 }
 
 .address {
 	font-size: 16px;
 	line-height: 24px;
+	padding: 0;
 }
 
 /*The widths are in a percentage!*/
@@ -164,7 +169,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	border-top: 3px solid #eee;
-	margin: 0 auto;
+	margin: 10px auto;
 	text-align: center;
 }
 footer span {
@@ -173,3 +178,28 @@ footer span {
 	color: #77a466;
 	font-size: 14px;
 }
+
+
+/* -------------------- TABLETS ------------------- */
+@media only screen and (min-width: 600px) {
+	.bottom-section {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 1px solid #eee;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 30%;
+		border-top: none;
+	}
+
+	.section-two {
+		border-right: 1px solid #eee;
+		border-left: 1px solid #eee;
+		padding: 0 20px;
+	}
+
